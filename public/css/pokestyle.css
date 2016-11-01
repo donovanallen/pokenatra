@@ -1,6 +1,43 @@
 
 
 /*Uncomment for sick pokestyle*/
+.button-delete {
+  font-family: "Pokemon", monospace;;
+  width: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgb(215, 215, 0);
+  font-size: 30px;
+  letter-spacing: .25em;
+  text-align: center;
+  color: rgb(35, 75, 180)
+}
+
+img {
+  height: 100px;
+  width: auto;
+  margin: auto;
+}
+
+.pokeview {
+  border: 3px solid rgb(215, 215, 0);
+  border-radius: 20px;
+  width: 60%;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(55, 95, 200, 0.5);
+  font-size: auto;
+  text-align: center;
+}
+
+.pokeview p {
+  font-size: 30px;
+}
+
+#back {
+
+}
 
 @font-face {
   font-family: "Pokemon";
@@ -23,6 +60,8 @@ body {
   font-family: "Pokemon", monospace;
   letter-spacing: .25em;
   font-size: 200%;
+  text-align: center;
+  float: none;
 }
 
 a:hover {
@@ -70,4 +109,7 @@ a:hover {
     text-shadow: 4px 4px 3px rgba(255, 0, 0, .3);
     background-color: rgba(0, 0, 0, .1);
   }
+}
+body * {
+  text-align: center;
 }

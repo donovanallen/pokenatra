@@ -1,0 +1,18 @@
+<div class="pokeview">
+
+
+<h2> <%= @team.name %> </h2>
+
+<br>
+<p>
+  Trainers: <br> <% @team.trainers.each do |trainer| %>
+          <a href="/trainers/<%= trainer.id %>"><%= trainer.name %></a>
+            <br>
+            <% end %>
+</p>
+
+
+
+</div>
+
+<a id="back" style="font-size: 20px" href="/teams">Back to Teams</a>

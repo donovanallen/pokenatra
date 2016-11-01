@@ -8,6 +8,7 @@ require_relative 'db/connection'
 # Load models
 require_relative 'models/pokemon'
 require_relative 'models/trainer'
+require_relative 'models/team'
 
 get '/' do
   erb :"main/index"
@@ -84,4 +85,15 @@ delete '/trainers/:id' do
   @trainer = Trainer.find(params[:id])
   @trainer.destroy
   redirect '/trainers'
+end
+
+#TEAMS#
+get '/teams' do
+  @teams = Team.all
+  erb :"teams/index"
+end
+
+get '/teams/:id' do
+  @team = Team.find(params[:id])
+  erb :"teams/show"
 end

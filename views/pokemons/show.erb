@@ -4,7 +4,7 @@
 
 
 <h2> <%= @pokemon.name %> </h2>
-<span><%= @pokemon.trainer.name %></span>
+<span> <a href="/trainers/<%= @pokemon.trainer_id %>"> <%= @pokemon.trainer.name %></a></span>
 
 <img src="<%= @pokemon.img_url %>"/>
 

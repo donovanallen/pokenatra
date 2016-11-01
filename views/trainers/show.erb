@@ -1,0 +1,29 @@
+<div class="pokeview">
+
+
+<h2> <%= @trainer.name %> </h2>
+
+<img src="<%= @trainer.img_url %>"/>
+<br>
+<p>
+  Level: <%= @trainer.level %>
+  <br>
+  <br>
+  Pokedex: <br> <% @trainer.pokemons.each do |pokemon| %>
+          <a href="/pokemon/<%= pokemon.id %>"><%= pokemon.name %></a>
+            <br>
+            <% end %>
+</p>
+<br>
+<a href="/trainers/<%= @trainer.id %>/edit">Edit</a>
+<br>
+<form action="/trainers/<%= @trainer.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input class="button-delete" type="submit" value="Delete">
+</form>
+
+
+
+</div>
+
+<a id="back" style="font-size: 20px" href="/trainers">Back to Trainers</a>

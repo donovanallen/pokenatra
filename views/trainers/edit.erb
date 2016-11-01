@@ -1,0 +1,19 @@
+<form action="/trainers/<%= @trainer.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <input name="trainer[name]" value="<%= @trainer.name %>">
+
+  <input name="trainer[level]" value="<%= @trainer.level %>">
+
+  <input name="trainer[img_url]" value="<%= @trainer.img_url %>">
+
+  <input type="submit" value="Update">
+
+</form>
+
+<form action="/trainers/<%= @trainer.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input class="button-delete" type="submit" value="Delete">
+</form>
+
+<a href="/trainers">See Trainers</a>

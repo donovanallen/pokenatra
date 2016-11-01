@@ -1,16 +1,19 @@
+<div class="bigview">
+
 <div class="pokeview">
 
 
 <h2> <%= @pokemon.name %> </h2>
+<span><%= @pokemon.trainer.name %></span>
 
 <img src="<%= @pokemon.img_url %>"/>
-<br>
+
 <p>
   PokeType: <%= @pokemon.poke_type %>
   <br>
   CP: <%= @pokemon.cp %>
 </p>
-
+<br>
 <a href="/pokemon/<%= @pokemon.id %>/edit">Edit</a>
 <br>
 <form action="/pokemon/<%= @pokemon.id %>" method="post">
@@ -23,3 +26,5 @@
 </div>
 
 <a id="back" style="font-size: 20px" href="/pokemon">Back to Pokedex</a>
+
+</div>
